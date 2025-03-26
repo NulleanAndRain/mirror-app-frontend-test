@@ -1,7 +1,15 @@
 import "normalize.css";
 
+import { Provider } from "react-redux";
+import { store } from "./Store";
+import { SettingsPanel } from "./Components/Settings/SettingsPanel";
+
 function App() {
-  return <h1>Hi dev!</h1>;
+  return (
+    <Provider store={store}>
+      <SettingsPanel />
+    </Provider>
+  );
 }
 
 export default App;
