@@ -5,6 +5,7 @@ export type Navigation = "load-more" | "pagination";
 
 type LayoutConfig = Record<LayoutElement, number>;
 type LayoutParams = Record<Layout, LayoutConfig>;
+type LayoutParamsPartial = Partial<Record<Layout, LayoutConfig>>;
 
 export interface Settings {
   layout: {
@@ -13,4 +14,14 @@ export interface Settings {
   };
   template: Template;
   navigation: Navigation;
+}
+
+
+export interface SettingsUpdateModel {
+  layout?: {
+    current?: Layout;
+    params?: LayoutParamsPartial;
+  };
+  template?: Template;
+  navigation?: Navigation;
 }

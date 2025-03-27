@@ -1,5 +1,6 @@
 import { Layout, Navigation, Template } from "../Types/settings";
 
+
 export const mapLayoutName = (layout: Layout) => {
   switch (layout) {
     case 'grid': return 'Сетка';
