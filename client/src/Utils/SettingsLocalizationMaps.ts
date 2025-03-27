@@ -17,7 +17,7 @@ export const mapNavigationName = (navigation: Navigation) => {
 
 export const mapTemplateName = (template: Template) => {
   switch (template) {
-    case 'classic': return 'Классическая';
-    case 'hover': return 'Наведения';
+    case 'classic': return 'Классический';
+    case 'hover': return 'Текст сверху';
   }
 }

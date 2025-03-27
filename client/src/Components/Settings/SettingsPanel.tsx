@@ -170,7 +170,7 @@ export const SettingsPanel = ({ saveCallback }: SettingsPanelProps) => {
       />
       <SettingsRowDropdown
         allValues={allTemplates}
-        title="Тип карточки:"
+        title="Тип поста:"
         currentValue={templateType.value}
         localizationMapper={(val: string) => mapTemplateName(val as Template)}
         onChange={templateChangeHandler}
