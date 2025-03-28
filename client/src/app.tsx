@@ -1,7 +1,5 @@
 import "normalize.css";
 
-import { Provider } from "react-redux";
-import { store } from "./Store";
 import { useState } from "react";
 import { SettingsModal } from "./Components/Settings/SettingsModal";
 import {
@@ -11,11 +9,15 @@ import {
 } from "./Components/CommonStyles/RootStyles";
 import settingsIco from "./Static/cogwheel.png";
 import { PageContent } from "./Components/Layout/PageContent";
+import { useServerData } from "./Hooks/AppHooks";
 
 function App() {
   const [displaySettingsModal, setDisplaySettingsModal] = useState(false);
+
+  useServerData();
+
   return (
-    <Provider store={store}>
+    <>
       <TopMenu>
         <SettingsButtonWrapper
           onClick={(e) => {
@@ -33,7 +35,7 @@ function App() {
         display={displaySettingsModal}
         setDisplay={setDisplaySettingsModal}
       />
-    </Provider>
+    </>
   );
 }
 

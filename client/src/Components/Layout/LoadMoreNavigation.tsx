@@ -18,7 +18,7 @@ export const LoadMoreNavigation = ({
 
   useEffect(() => {
     setDisplayingPosts(
-      allPosts.slice(0, Math.min(displayingPostsCount, allPosts.length - 1))
+      allPosts.slice(0, Math.min(displayingPostsCount, allPosts.length))
     );
   }, [allPosts, currentPagesCount, displayingPostsCount, setDisplayingPosts]);
 

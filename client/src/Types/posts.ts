@@ -16,3 +16,9 @@ export interface PostData {
   comments: number;
   userName: string;
 }
+
+export interface User {
+  id: string;
+  username: string;
+  postId: string;
+}

@@ -3,11 +3,9 @@ import { Layout, Settings, SettingsUpdateModel, } from '../Types/settings';
 
 export type SettingsSlice = {settings: Settings};
 
-const storageKey = 'settings';
-const savedStateJson = sessionStorage.getItem(storageKey);
-const savedState = savedStateJson ? JSON.parse(savedStateJson) : null as Settings | null;
+export const settingsStorageKey = 'settings';
 
-const initState : Settings = savedState ?? {
+const initState : Settings = {
   layout: {
     current: 'grid',
     params: { 
@@ -39,7 +37,7 @@ const settingsSlice = createSlice({
       if (model.template)
         state.template = model.template;
 
-      sessionStorage.setItem(storageKey, JSON.stringify(state));
+      sessionStorage.setItem(settingsStorageKey, JSON.stringify(state));
     },
   }
 });
