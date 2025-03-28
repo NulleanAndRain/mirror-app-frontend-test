@@ -9,6 +9,7 @@ export const PostContainer = styled.div`
   color: #ffffff;
   border-radius: 12px;
   width: 100%;
+  height: 100%;
 `;
 
 export const PostHeaderClassic = styled.div`
@@ -38,6 +39,7 @@ export const PostContentClassic = styled.div`
   box-sizing: border-box;
   font-size: 18px;
   font-weight: lighter;
+  height: 100%;
 `;
 
 export const PostFooterClassic = styled.div`

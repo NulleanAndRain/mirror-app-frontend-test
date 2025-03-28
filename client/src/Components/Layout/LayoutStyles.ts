@@ -30,6 +30,7 @@ export const GridLayoutContainer = styled.div<{ $columns: number }>`
 export const GridPostWrapper = styled.div`
   box-sizing: border-box;
   width: 100%;
+  height: 100%;
 `;
 
 export const MasonryLayoutContainer = styled.div<{ $columns: number }>`
@@ -54,10 +55,40 @@ export const MasonryColumn = styled.div`
 
 export const MasonryPostWrapper = styled.div`
   box-sizing: border-box;
+  width: 100%;
+  height: max-content;
 `;
 
 export const LoadMoreButton = styled.button`
   padding: 10px 40px;
+  background-color: #d4faf5;
+  border: #8e8e8e solid 1px;
+  border-radius: 4px;
+`
+
+export const PaginationContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+`;
+
+export const PaginationCell = styled.span`
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+export const PaginationButton = styled.button`
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #d4faf5;
   border: #8e8e8e solid 1px;
   border-radius: 4px;
