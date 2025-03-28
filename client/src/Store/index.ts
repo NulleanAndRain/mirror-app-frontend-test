@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import settingsSlice from "./settingsSlice";
+import postsCacheSlice from "./postsCacheSlice";
 
 export const store = configureStore({
   reducer: {
-    settings: settingsSlice
+    settings: settingsSlice,
+    postsCache: postsCacheSlice
   }
 })
 

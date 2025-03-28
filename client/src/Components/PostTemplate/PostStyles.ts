@@ -5,10 +5,10 @@ export const PostContainer = styled.div`
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  font-family: 'Verdana';
   background-color: #2b2b2b;
   color: #ffffff;
   border-radius: 12px;
+  width: 100%;
 `;
 
 export const PostHeaderClassic = styled.div`
@@ -70,12 +70,12 @@ export const PostFooterHovered = styled.div`
 `
 
 export const PostAuthorDateBlockHovered = styled.div`
-  width: max-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 4px;
+  box-sizing: border-box;
 `
 
 export const PostCommentsLikesBlockHovered = styled.div`
@@ -84,6 +84,7 @@ export const PostCommentsLikesBlockHovered = styled.div`
   justify-content: flex-end;
   align-items: center;
   gap: 20px;
+  box-sizing: border-box;
 `
 
 export const PostContentHovered = styled(PostContentClassic)`

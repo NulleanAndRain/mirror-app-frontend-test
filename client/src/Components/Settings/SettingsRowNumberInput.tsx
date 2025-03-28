@@ -6,7 +6,7 @@ interface SettingsRowParams {
   title: string;
   currentValue: number;
   minValue: number;
-  maxValue: number;
+  maxValue?: number;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 

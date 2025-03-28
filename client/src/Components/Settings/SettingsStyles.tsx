@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SettingsModalWrapper = styled.div`
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: rgba(160, 160, 160, 0.5);
@@ -14,7 +14,7 @@ export const SettingsModalWrapper = styled.div`
   z-index: 100;
 `;
 
-export const SettingsPanelStyled = styled.div`
+export const SettingsPanelStyled = styled.dialog`
   width: max-content;
   height: max-content;
   padding: 20px;

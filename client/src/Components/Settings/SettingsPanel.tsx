@@ -198,7 +198,6 @@ export const SettingsPanel = ({ saveCallback }: SettingsPanelProps) => {
           currentValue={rowsCount.value}
           title="Число строк:"
           minValue={1}
-          maxValue={16}
           onChange={rowsCountChangeHandler}
         />
       )}

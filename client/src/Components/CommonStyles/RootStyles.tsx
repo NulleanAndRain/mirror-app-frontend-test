@@ -1,13 +1,11 @@
 import styled from "styled-components";
 
 export const TopMenu = styled.menu`
-  position: relative;
+  position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   padding: 0;
   margin: 0;
-  width: 100vw;
-  height: 80px;
   display: flex;
   flex-direction: row;
   align-items: center;

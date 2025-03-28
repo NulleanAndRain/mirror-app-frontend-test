@@ -51,5 +51,7 @@ export default settingsSlice.reducer
 export const selectLayout = (state : SettingsSlice) => state.settings.layout.current;
 export const selectNavigation = (state : SettingsSlice) => state.settings.navigation;
 export const selectTemplate = (state : SettingsSlice) => state.settings.template;
-export const selectCurrentColums = (state : SettingsSlice, currentLayout: Layout) => state.settings.layout.params[currentLayout].columns ?? 1;
-export const selectCurrentRows = (state : SettingsSlice, currentLayout: Layout) => state.settings.layout.params[currentLayout].rows ?? 1;
+export const selectCurrentColums = (state : SettingsSlice, currentLayout?: Layout) => 
+  state.settings.layout.params[currentLayout ?? state.settings.layout.current].columns ?? 1;
+export const selectCurrentRows = (state : SettingsSlice, currentLayout?: Layout) => 
+  state.settings.layout.params[currentLayout ?? state.settings.layout.current].rows ?? 1;
