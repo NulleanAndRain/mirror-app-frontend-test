@@ -27,6 +27,7 @@ export const SettingsRowDropdown = ({
           })}
           value={currentValue}
           onChange={onChange}
+          menuClassName="settings__dropdown__menu"
         />
       </SettingValue>
     </SettingsRowStyle>

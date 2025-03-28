@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { borderDefault, controlBgColor } from "../CommonStyles/RootStyles";
 
 export const PageContainer = styled.div`
   width: 100%;
@@ -10,8 +11,8 @@ export const PageContainer = styled.div`
   align-items: center;
   margin-top: 80px;
   margin-bottom: 40px;
-  font-family: 'Verdana';
-`
+  font-family: "Verdana";
+`;
 
 export const GridLayoutContainer = styled.div<{ $columns: number }>`
   display: grid;
@@ -20,11 +21,10 @@ export const GridLayoutContainer = styled.div<{ $columns: number }>`
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
-  ${({$columns}) => 
+  ${({ $columns }) =>
     css`
       grid-template-columns: repeat(${$columns}, minmax(260px, 1fr));
-    `
-  }
+    `}
 `;
 
 export const GridPostWrapper = styled.div`
@@ -38,11 +38,10 @@ export const MasonryLayoutContainer = styled.div<{ $columns: number }>`
   grid-auto-flow: row;
   grid-gap: 10px;
   padding: 10px;
-  ${({$columns}) => 
+  ${({ $columns }) =>
     css`
       grid-template-columns: repeat(${$columns}, minmax(260px, 1fr));
-    `
-  }
+    `}
 `;
 
 export const MasonryColumn = styled.div`
@@ -60,11 +59,16 @@ export const MasonryPostWrapper = styled.div`
 `;
 
 export const LoadMoreButton = styled.button`
+  margin-top: 20px;
   padding: 10px 40px;
-  background-color: #d4faf5;
-  border: #8e8e8e solid 1px;
+  background-color: ${controlBgColor};
+  border: ${borderDefault};
   border-radius: 4px;
-`
+
+  &:enabled {
+    cursor: pointer;
+  }
+`;
 
 export const PaginationContainer = styled.div`
   display: flex;
@@ -72,6 +76,8 @@ export const PaginationContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 `;
 
 export const PaginationCell = styled.span`
@@ -80,7 +86,7 @@ export const PaginationCell = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
-`
+`;
 
 export const PaginationButton = styled.button`
   width: 100%;
@@ -89,7 +95,11 @@ export const PaginationButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #d4faf5;
-  border: #8e8e8e solid 1px;
+  background-color: ${controlBgColor};
+  border: ${borderDefault};
   border-radius: 4px;
-`
+
+  &:enabled {
+    cursor: pointer;
+  }
+`;

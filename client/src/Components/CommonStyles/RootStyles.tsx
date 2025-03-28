@@ -28,3 +28,8 @@ export const SettingsButtonIcon = styled.img`
   padding: 10px;
   box-sizing: border-box;
 `;
+
+export const controlBgColor = "#d4faf5";
+export const controlBgColorHighlight = "#ebfaf8";
+
+export const borderDefault = "#8e8e8e solid 1px";

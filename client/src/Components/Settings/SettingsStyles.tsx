@@ -1,4 +1,9 @@
 import styled from "styled-components";
+import {
+  borderDefault,
+  controlBgColor,
+  controlBgColorHighlight,
+} from "../CommonStyles/RootStyles";
 
 export const SettingsModalWrapper = styled.div`
   width: 100vw;
@@ -11,7 +16,7 @@ export const SettingsModalWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 100;
+  z-index: 10;
 `;
 
 export const SettingsPanelStyled = styled.dialog`
@@ -47,7 +52,7 @@ export const SettingsRowStyle = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border: #8e8e8e solid 1px;
+  border: ${borderDefault};
   border-radius: 8px;
 `;
 
@@ -56,18 +61,61 @@ export const SettingKey = styled.span`
 `;
 
 export const SettingValue = styled.span`
-  width: auto;
+  width: 200px;
   padding: 10px;
-  height: 20px;
-  border: #8e8e8e solid 1px;
+  height: 40px;
+  border: ${borderDefault};
   border-radius: 4px;
   text-align: center;
-  background-color: #cffff9;
+  background-color: ${controlBgColor};
+  box-sizing: border-box;
+
+  .Dropdown-root {
+    z-index: 250;
+    position: relative;
+  }
+  .Dropdown-placeholder:hover {
+    background-color: ${controlBgColorHighlight};
+    cursor: pointer;
+  }
+  .settings__dropdown__menu {
+    background-color: ${controlBgColor};
+    width: 200px;
+    box-sizing: border-box;
+    margin-left: -10.5px;
+    border: ${borderDefault};
+    border-radius: 0 0 4px 4px;
+    border-top: none;
+    padding-top: 4px;
+    cursor: pointer;
+
+    div[role="option"] {
+      cursor: pointer;
+      &:hover {
+        background-color: ${controlBgColorHighlight};
+      }
+    }
+  }
+
+  input[type="number"] {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+    &:hover,
+    &:focus {
+      background-color: ${controlBgColorHighlight};
+      border: none;
+    }
+    &:focus {
+      outline: ${borderDefault};
+    }
+  }
 `;
 
 export const SettingsSaveButton = styled.button`
-  background-color: #d4faf5;
-  border: #8e8e8e solid 1px;
+  background-color: ${controlBgColor};
+  border: ${borderDefault};
   border-radius: 4px;
   padding: 10px;
 `;
